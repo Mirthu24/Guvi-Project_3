@@ -52,8 +52,6 @@ steering = st.sidebar.selectbox('Steering Type', sorted(df['Steering Type'].uniq
 
 seats = st.sidebar.number_input('Seaters', min_value=int(df['Seats_specs'].min()), max_value=int(df['Seats_specs'].max()), step=1)
 
-eng_disp = st.sidebar.number_input('Engine Displacement(CC)', min_value=int(df['Displacement'].min()), max_value=int(df['Displacement'].max()), step=100)
-
 Tyre = st.sidebar.selectbox('Tyre Type', sorted(df['Tyre Type'].unique()))
 
 Trunck_space = st.sidebar.number_input('Trunk space(litres)', min_value=float(df['Cargo Volumn'].min()), max_value=float(df['Cargo Volumn'].max()), step=0.50)
@@ -72,7 +70,6 @@ input_data = {
     'Steering Type': steering,
     'Mileage': mileage,
     'Seats_specs' : seats,
-    'Displacement' : eng_disp,
     'Tyre Type' : Tyre,
     'Cargo Volumn' : Trunck_space
 }
@@ -103,7 +100,7 @@ onehot = onehot.loc[:, (onehot != 0).any(axis=0)]
 encoded = pd.concat([label, onehot], axis=1)
 
 # Scaling
-Scale = input_df[['ownerNo', 'km', 'Mileage', 'modelYear', 'Displacement', 'Cargo Volumn', 'Seats_specs']].copy()
+Scale = input_df[['ownerNo', 'km', 'Mileage', 'modelYear', 'Cargo Volumn', 'Seats_specs']].copy()
 for col3 in Scale.columns:
     if col3 in scaler:
         Scale[col3] = scaler[col3].transform(Scale[[col3]])
