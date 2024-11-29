@@ -28,7 +28,7 @@ The initial step involved cleaning and preprocessing the dataset to ensure accur
 4. Feature Engineering: Encoded categorical variables and scaled numerical features.
 
 ### CONCLUSION
-The Car Dheko – Used Car Price Prediction project successfully developed a machine learning-based solution to predict the prices of used cars. The Random Forest model, with an R-squared value of 0.941, demonstrated high accuracy in price predictions. The integration of the model into an interactive Streamlit-based web application enhances the decision-making process for both prospective buyers and sellers, streamlining the pricing process and increasing customer satisfaction.
+The Car Dheko – Used Car Price Prediction project successfully developed a machine learning-based solution to predict the prices of used cars. The Random Forest model, with an R-squared value of 0.927, demonstrated high accuracy in price predictions. The integration of the model into an interactive Streamlit-based web application enhances the decision-making process for both prospective buyers and sellers, streamlining the pricing process and increasing customer satisfaction.
 
 ### Author
 Mirthu Baashini B, Data Science Student, Batch MDE95, GUVI Geek Networks
